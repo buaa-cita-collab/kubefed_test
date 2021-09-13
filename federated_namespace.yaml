@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cita-ns
+---
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedNamespace
+metadata:
+  name: cita-ns
+  namespace: cita-ns
+spec:
+  placement:
+    clusters:
+    - name: cita1
+    - name: cita2
+---
